@@ -243,7 +243,9 @@ function AboutMe() {
                     </div> 
                     
                 <Button>
+                    <a href="/KV-CV.pdf" download >
                     Descargar CV
+                    </a>
                 </Button>
                 <BottonIcon>
                    <Image
