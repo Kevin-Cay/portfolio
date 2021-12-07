@@ -79,7 +79,7 @@ const ProyectDiv = styled.div`
     }
     @media (max-width:479px){
         margin-bottom:1.5em;
-        height: 500px;
+        height: 550px;
     }
 `
 
@@ -113,7 +113,7 @@ const ProyectDescription = styled.div`
         padding: 1em ;
         height:100%;
         grid-column: 1/-1;
-        grid-row:6/-1;
+        grid-row:5/-1;
         background-color: #666666;
         border-radius: 5px;
         box-shadow: 0 0 3px 5px rgba(0,0,0,0.025) ;
@@ -249,7 +249,7 @@ const ProyectLeftDescription = styled.div`
         padding: 1em ;
         height:100%;
         grid-column: 1/-1;
-        grid-row:6/-1;
+        grid-row:5/-1;
         background-color: #666666;
         border-radius: 5px;
         box-shadow: 0 0 3px 5px rgba(0,0,0,0.025) ;
