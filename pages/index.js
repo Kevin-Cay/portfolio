@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Head from 'next/head'
 import AboutMe from '../components/AboutMe'
 import ContactForm from '../components/ContactForm'
@@ -7,20 +8,20 @@ import Proyects from '../components/Proyects'
 import Technologies from '../components/Technologies'
 
 export default function Home() {
-  
-  return (
+    const [language, setLanguage] = useState('english');
+    return (
     <div >
-      <Head>
+      <Head >
         <title>Kevin Cay</title>
         <meta name="KevinCay||Portfolio" content="This is my amazing portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <NavBar />
-      <Header />
-      <AboutMe id="about"/>
-      <Proyects id="proyects" />
-      <Technologies id="tech" />
-      <ContactForm id="contact" />
+      <NavBar setLanguage={setLanguage} language={language} />
+      <Header language={language} />
+      <AboutMe  language={language} id="about"/>
+      <Proyects language={language} id="proyects" />
+      <Technologies language={language} id="tech" />
+      <ContactForm language={language} id="contact" />
     </div>
   )
 }
