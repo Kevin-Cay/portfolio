@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 
 export const Container = styled.section`
+    margin-top: ${props=> props.mTop || 0 } ;
     width: 100%;
-    height: auto;
+    height: ${props => props.height || 'auto' };
     max-width: 1400px;
     display: flex;
     flex-direction: column;
@@ -10,11 +11,11 @@ export const Container = styled.section`
     justify-content: center;
     padding: 1em 4em 0 4em ;
     @media (max-width:780px){
-        height: 750px ;
+        height: ${props => props.height780 || 'auto' } ;
         padding: 0 2em 2.5em 2em;
     }
     @media (max-width:450px){
-        height: 900px ;
+        height: ${props => props.height450 || 'auto' } ;
         padding: 0 2em 2.5em 2em;
     }
 `
@@ -42,6 +43,21 @@ export const Title = styled.div`
         
     }
 `
+export const Puntos = styled.div`
+        width: 50px;
+        height: 50px;
+        opacity: 0.9;
+        background-size: 10px 10px;
+        background-image: radial-gradient(#ffc340 0.85px, #454546 0.85px);
+        position: absolute;
+        top:-15px;
+        left: 0px;
+        @media (max-width:780px){
+        top:-20px;
+        left: 0px;
+    }
+`
+
 
 export const ImageContainerAvatar = styled.div`
     width: ${props=> props.width};
@@ -84,19 +100,5 @@ transition: all 0.3s ease-in;
     background-color: #ffc340;
     color:#454546;
 }
-`
-export const Puntos = styled.div`
-        width: 50px;
-        height: 50px;
-        opacity: 0.9;
-        background-size: 10px 10px;
-        background-image: radial-gradient(#ffc340 0.85px, #454546 0.85px);
-        position: absolute;
-        top:-15px;
-        left: 0px;
-        @media (max-width:780px){
-        top:-20px;
-        left: 0px;
-    }
 `
 

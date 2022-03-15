@@ -2,369 +2,21 @@ import styled from "styled-components"
 import Image from 'next/image';
 import {BsGithub} from 'react-icons/bs';
 import{BiLinkExternal} from 'react-icons/bi'
+import { Container, Title, Puntos } from "./global.styles";
+import { ProyectContent, ProyectDiv, ProyectImg, ProyectDescription, ProyectTitle, DescriptionCard, TechDescription, ProyectLinks, ProyectLeftImg,  ProyectLeftDescription, ProyectLeftTitle,  DescriptionCardLeft, TechLeftDescription, ProyectLeftLinks } from "./Proyects.styles";
 
-const Container = styled.section`
-    margin-top: 2em;
-    width: 100%;
-    height: auto ;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1em 4em 0 4em ;
-    @media (max-width:780px){
-        height: auto ;
-        padding: 0 2em 2.5em 2em;
-    }
-`
-const Title = styled.div`
-    width: 100%;
-    height: auto ;
-    margin: 0.5rem 0 0 0;
-    position: relative;
-    h1{
-        font-size: 3rem;
-        margin:0px;
-        position: relative;
-        left: 25px;
-    }
-    span{
-        font-weight:600;
-        color: #ffc340;
-        font-size: 3rem;
-    }
-    @media (max-width:780px){
-       h1{
-           font-size: 2.2rem;
-       }
-        
-    }
-`
-const Puntos = styled.div`
-        width: 50px;
-        height: 50px;
-        opacity: 0.9;
-        background-size: 10px 10px;
-        background-image: radial-gradient(#ffc340 0.85px, #454546 0.85px);
-        position: absolute;
-        top:-15px;
-        left: 0px;
-        @media (max-width:780px){
-        top:-20px;
-        left: 0px;
-    }
-`
-const Content =  styled.div`
-    margin-top: 2em;
-    width:100%;
-    height: auto;   
-    display:flex;
-    flex-direction: column;
-    align-items:center;
-`
-
-const ProyectDiv = styled.div`
-    width: 100%;
-    height: 375px;
-    max-width:1100px;
-    margin-bottom:3em;
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr;
-    @media (max-width:599px){
-        height: 550px;
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(12, 1fr) ;
-    }
-    @media (max-width:479px){
-        margin-bottom:1.5em;
-        height: 550px;
-    }
-`
-
-const ProyectImg = styled.div`
-    grid-column: 1/8;
-    grid-row:1/-1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    position: relative ;
-    @media (max-width:599px){
-        grid-column: 1/-1;
-        grid-row:1/7;
-    }
-    /* @media (max-width:479px){
-        grid-row:1/3;
-    } */
-`
-const ProyectDescription = styled.div`
-    grid-column: 7/-1;
-    grid-row:1/-1;
-    width: 100%;
-    z-index:20;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    /* border: 1px #666666 solid; */
-    @media (max-width:599px){
-        padding: 1em ;
-        height:100%;
-        grid-column: 1/-1;
-        grid-row:5/-1;
-        background-color: #666666;
-        border-radius: 5px;
-        box-shadow: 0 0 3px 5px rgba(0,0,0,0.025) ;
-        justify-content: center;
-    }
-`
-const ProyectTitle = styled.div`
-    width: 100%;
-    height: auto ;
-    position: relative;
-    text-align: right;
-    h1{
-        font-size: 2.5rem;
-        margin:0px;
-    }
-    span{
-        font-weight:600;
-        color: #ffc340;
-        font-size: 3rem;
-    }
-    @media (max-width:780px){
-       h1{
-           font-size: 2rem;
-       }
-        
-    }
-    @media (max-width:599px){
-        text-align: left;
-        h1{
-           font-size: 1.8rem;
-       }
-    }
-`
-
-const DescriptionCard = styled.div`
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    background-color: #666666;
-    border-radius: 5px;
-    box-shadow: 0 0 3px 5px rgba(0,0,0,0.05) ;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    line-height: 150%;
-    p{
-        margin:0;
-        text-align: right;
-    }
-    span{
-        font-weight:600;
-        color: #ffc340;
-    }
-    @media (max-width:599px){
-    box-shadow: none;
-    padding: 0px;
-    p{
-        margin:0;
-        text-align: left;
-    }
-    }
-    
-`
-const TechDescription = styled.div`
-    margin-top:15px;
-    width:100%;
-    display: flex;
-    justify-content: flex-end;
-    p{
-        margin: 0;
-        font-size: 1rem;
-        font-weight:600;
-        margin-left:20px;
-        color: #ffc340;
-    }
-    @media (max-width:800px){
-        p{
-            font-size: 0.8rem;
-        font-weight:600;
-        margin-left:10px;
-        }
-    }
-    @media (max-width:599px){
-        justify-content: flex-start;
-        margin-bottom:10px;
-    p{
-        margin:0;
-        margin-right: 10px;
-        font-size: 0.8rem;
-        text-align: left;
-    }
-    }
-`
-
-
-const ProyectLinks = styled.div`
-    width: 100%;
-    height: auto;
-    display: flex; 
-    justify-content: flex-end;
-    a:hover{
-        color: #ffc340;
-    }
-    @media (max-width:599px){
-    justify-content: flex-start;
-    }
-
-`
-const ProyectLeftImg = styled.div`
-    grid-column: 6/-1;
-    grid-row:1/-1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items:center;
-    justify-content:center;
-    position: relative ;
-    @media (max-width:599px){
-        grid-column: 1/-1;
-        grid-row:1/7;
-    }
-`
-const ProyectLeftDescription = styled.div`
-    grid-column: 1/7;
-    grid-row:1/-1;
-    width: 100%;
-    z-index:20;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    /* border: 1px #666666 solid; */
-    @media (max-width:599px){
-        padding: 1em ;
-        height:100%;
-        grid-column: 1/-1;
-        grid-row:5/-1;
-        background-color: #666666;
-        border-radius: 5px;
-        box-shadow: 0 0 3px 5px rgba(0,0,0,0.025) ;
-        justify-content: center;
-    }
-`
-const ProyectLeftTitle = styled.div`
-    width: 100%;
-    height: auto ;
-    position: relative;
-    text-align: left;
-    h1{
-        font-size: 2.5rem;
-        margin:0px;
-    }
-    span{
-        font-weight:600;
-        color: #ffc340;
-        font-size: 3rem;
-    }
-    @media (max-width:780px){
-       h1{
-           font-size: 2rem;
-       }
-        
-    }
-    @media (max-width:599px){
-        text-align: left;
-        h1{
-           font-size: 1.8rem;
-       }
-    }
-`
-const DescriptionCardLeft = styled.div`
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    background-color: #666666;
-    border-radius: 5px;
-    box-shadow: 0 0 3px 5px rgba(0,0,0,0.05) ;
-    padding: 2em;
-    display: flex;
-    flex-direction: column;
-    line-height: 150%;
-    p{
-        margin:0;
-        text-align: left;
-    }
-    span{
-        font-weight:600;
-        color: #ffc340;
-    }
-    @media (max-width:599px){
-    box-shadow: none;
-    padding: 0px;
-    p{
-        margin:0;
-        text-align: left;
-    }
-    }
-    
-`
-const TechLeftDescription = styled.div`
-    margin-top:15px;
-    width:100%;
-    display: flex;
-    justify-content: flex-start;
-    p{
-        margin: 0;
-        font-size: 1rem;
-        font-weight:600;
-        margin-right:20px;
-        color: #ffc340;
-    }
-    @media (max-width:800px){
-        p{
-            font-size: 0.8rem;
-        font-weight:600;
-        margin-right:10px;
-        }
-    }
-    @media (max-width:599px){
-        justify-content: flex-start;
-        margin-bottom:10px;
-    p{
-        margin:0;
-        margin-right: 10px;
-        font-size: 0.8rem;
-        text-align: left;
-    }
-    }
-`
-const ProyectLeftLinks = styled.div`
-    width: 100%;
-    height: auto;
-    display: flex; 
-    justify-content: flex-start;
-    a:hover{
-        color: #ffc340;
-    }
-    @media (max-width:599px){
-    justify-content: flex-start;
-    }
-
-`
-
-function Proyects() {
+function Proyects({language}) {
     return (
-        <Container id="proyects" >
+        <Container id="proyects" 
+        nopadding 
+        mTop="3em"
+        height="auto"  >
             <Title>
                 <Puntos />
-                <h1>Proyectos<span>.</span></h1>
+                <h1>{language == "english" ? 'Proyects': 'Proyectos'}<span>.</span></h1>
                 {/* <h1>Proyects<span>.</span></h1> */}
             </Title>
-            <Content>
+            <ProyectContent>
             <ProyectDiv>
                 <ProyectImg >
                     <a target="_blank" href="https://kevin-cay.github.io/notes-app/" rel="noopener noreferrer">
@@ -381,22 +33,28 @@ function Proyects() {
                         <h1>Notes App<span>.</span> </h1>
                     </ProyectTitle>
                     <DescriptionCard>
-                        {/* <p>A nice app to create your own collection of <span>notes.</span> </p>
-                        <p>
-                            Create a note wherever you are with your email or your Google Account.
-                            I build this app with Google Auth and Firestore Database. 
+                        {
+                            language == "english" ? 
+                            <>
+                            <p>A good app to create your personal collection of <span>notes.</span> </p>
+                            <p>
+                                Just login with you Google Account and enjoy a personal section to write different notes as much as you can. You can use this app wherever you are because it is connected with Firebase’s Realtime Database.
+                            </p>
+                            <p>
+                        It’s free for you 🙂.
                         </p>
-                        <p>
-                        And it’s free for you 🙂.
-                        </p> */}
-                        <p>Una buena app para crear tu propia colección de <span>notas.</span> </p>
+                            </>
+                            :
+                            (<><p>Una buena app para crear tu propia colección de <span>notas.</span> </p>
                         <p>
                             Solo nocesitas tu cuenta de google para poder crear una nota en cualquier lugar, 
                             esta aplicación está creada con Firebase, Google Authentication y React JS.
                         </p>
                         <p>
                         Y es totalmente gratis para ti 🙂.
-                        </p>
+                        </p></>)
+                        }
+                        
                         <TechDescription>
                             <p>React JS</p>
                             <p>React Icons</p> 
@@ -407,6 +65,7 @@ function Proyects() {
                     <a 
                     href="https://github.com/Kevin-Cay/notes-app" 
                     target="_blank" 
+                    title="GitHub Repo"
                     rel="noopener noreferrer">
                     <BsGithub  
                     size={'2rem'} 
@@ -415,7 +74,8 @@ function Proyects() {
                     </a>
                     <a 
                     href="https://kevin-cay.github.io/notes-app/" 
-                    target="_blank" 
+                    target="_blank"
+                    title="Notes App" 
                     rel="noopener noreferrer">
                     <BiLinkExternal 
                     size={'2rem'} 
@@ -586,7 +246,7 @@ function Proyects() {
                     </ProyectLeftLinks>
                 </ProyectLeftDescription>  
             </ProyectDiv> 
-            </Content>
+            </ProyectContent>
         </Container>
     )
 }

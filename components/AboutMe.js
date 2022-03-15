@@ -8,7 +8,11 @@ import { AboutContent, ImageDiv, MessageDiv , Message, BottonIcon} from './About
 
 function AboutMe({language}) {
     return (
-        <Container id="about" nopadding >
+        <Container id="about" 
+        nopadding 
+        height="auto" 
+        height780="750px"
+        height450='900px' >
             <Title>
                 <Puntos />
                 {/* <h1>About Me<span>.</span></h1> */}
