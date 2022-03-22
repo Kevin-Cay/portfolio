@@ -35,24 +35,25 @@ function Proyects({language}) {
                     <DescriptionCard>
                         {
                             language == "english" ? 
-                            <>
+                            (<>
                             <p>A good app to create your personal collection of <span>notes.</span> </p>
                             <p>
                                 Just login with you Google Account and enjoy a personal section to write different notes as much as you can. You can use this app wherever you are because it is connected with Firebase’s Realtime Database.
                             </p>
                             <p>
-                        It’s free for you 🙂.
-                        </p>
-                            </>
+                            It’s free for you 🙂.
+                            </p>
+                            </>)
                             :
                             (<><p>Una buena app para crear tu propia colección de <span>notas.</span> </p>
-                        <p>
+                            <p>
                             Solo nocesitas tu cuenta de google para poder crear una nota en cualquier lugar, 
                             esta aplicación está creada con Firebase, Google Authentication y React JS.
-                        </p>
-                        <p>
-                        Y es totalmente gratis para ti 🙂.
-                        </p></>)
+                            </p>
+                            <p>
+                            Y es totalmente gratis para ti 🙂.
+                            </p></>
+                            )
                         }
                         
                         <TechDescription>
@@ -61,35 +62,18 @@ function Proyects({language}) {
                             <p>Firebase</p> 
                         </TechDescription>
                     </DescriptionCard>
-                    <ProyectLinks>
-                    <a 
-                    href="https://github.com/Kevin-Cay/notes-app" 
-                    target="_blank" 
-                    title="GitHub Repo"
-                    rel="noopener noreferrer">
-                    <BsGithub  
-                    size={'2rem'} 
-                    style={{marginRight: "1rem"}} 
-                    />
-                    </a>
-                    <a 
-                    href="https://kevin-cay.github.io/notes-app/" 
-                    target="_blank"
-                    title="Notes App" 
-                    rel="noopener noreferrer">
-                    <BiLinkExternal 
-                    size={'2rem'} 
-                    />
-                    </a>
-                    </ProyectLinks>
+                    <ProyectLinksElement 
+                    side="right" 
+                    links={['https://github.com/Kevin-Cay/notes-app', 'https://kevin-cay.github.io/notes-app/' ]} 
+                    iconNames={['BsGithub', 'BiLinkExternal' ]} />
                 </ProyectDescription>  
             </ProyectDiv> 
             <ProyectDiv>
                 <ProyectLeftImg >
-                    <a target="_blank" href="https://fb-clone-f08df.firebaseapp.com/" rel="noopener noreferrer">
+                    <a target="_blank" href="https://kevin-cay.github.io/buscador-imagenes/" rel="noopener noreferrer">
                     <Image 
-                    src={"/fbCloneApp.png"} 
-                    alt="fbCloneApp" 
+                    src={"/searchImgApp.png"} 
+                    alt="Image_Search" 
                     layout="fill"  
                     objectFit="contain" 
                     />
@@ -97,42 +81,38 @@ function Proyects({language}) {
                 </ProyectLeftImg> 
                 <ProyectLeftDescription>
                     <ProyectLeftTitle>
-                        <h1>Facebook Clone<span>.</span> </h1>
+                        <h1>Image Search<span>.</span> </h1>
                     </ProyectLeftTitle>
                     <DescriptionCardLeft>
-                        <p>Un buen <span>Clon de Facebook. </span> para poder postear lo que quieras. </p>
-                        <p>
-                         Puedes escribir en un muro virtual lo que quieras y también un URL de cualquier foto. 
-                         Está conectada a una base de datos.
-                        </p>
-                        <p>
-                        Accede a la aplicación con tu cuenta de Google.
-                        </p>
+                        {
+                            language == "english" ?(
+                                <>
+                                <p>This is a good app to find a lot of <span>images</span> of different themes, sometimes with a short description</p>
+                                <p>Just type in a word to find a <span>collection</span> of images about it.</p>
+                                <p>Build with Unsplash API. </p>
+                                </>
+                            )
+                            :(
+                                <>
+                                 <p>Una manera muy fácil de encontrar cualquier <span>imagen. </span> sobre cualquier cosa y también con una breve descripción.</p>
+                                <p>
+                                Solo necesitas una palabra y se te mostarán muchas imagenes de manera ordenada. Es una manera simple de encontrar una buena imagen.
+                                </p>
+                                </>
+                            )
+                        }
+                       
                         <TechLeftDescription>
                             <p>React JS</p>
-                            <p>Firebase</p> 
-                            <p>Material UI</p> 
+                            <p>Unsplash API</p> 
+                            <p>Formik</p> 
                         </TechLeftDescription>
                     </DescriptionCardLeft>
-                    <ProyectLeftLinks>
-                    <a 
-                    href="https://github.com/Kevin-Cay/fb-clone" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <BsGithub  
-                    size={'2rem'} 
-                    style={{marginRight: "1rem"}} 
-                    />
-                    </a>
-                    <a 
-                    href="https://fb-clone-f08df.firebaseapp.com/" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <BiLinkExternal 
-                    size={'2rem'} 
-                    />
-                    </a>
-                    </ProyectLeftLinks>
+                    <ProyectLinksElement 
+                    side="left" 
+                    links={['https://github.com/Kevin-Cay/buscador-imagenes', 'https://kevin-cay.github.io/buscador-imagenes/' ]} 
+                    iconNames={['BsGithub', 'BiLinkExternal' ]} />
+                   
                 </ProyectLeftDescription>  
             </ProyectDiv> 
             
@@ -208,7 +188,7 @@ function Proyects({language}) {
                 </ProyectLeftImg> 
                 <ProyectLeftDescription>
                     <ProyectLeftTitle>
-                        <h1>Image Search<span>.</span> </h1>
+                        <h1>Tip Calculator<span> app.</span> </h1>
                     </ProyectLeftTitle>
                     <DescriptionCardLeft>
                         {/* <p>An easy way to find any <span>Image </span> about someone or something with a short description.</p>
@@ -249,6 +229,53 @@ function Proyects({language}) {
             </ProyectContent>
         </Container>
     )
+}
+
+const ProyectLinksElement = ({side, links, iconNames}) =>{
+    links.map((el, i) =>{
+        console.log(el, i)
+    })
+    if(side === 'left'){
+        return(
+            <ProyectLeftLinks>
+                {links.map((el, i) =>{
+                    return(
+                        <a 
+                        href={el} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        key={i}
+                        title={el}
+                        >
+                        {iconNames[i] === 'BsGithub' ? <BsGithub size={'2rem'} style={{marginRight: "1rem"}} /> : <BiLinkExternal size={'2rem'} />}
+                        </a>
+                    )
+                })}
+            </ProyectLeftLinks>
+        )
+    }else{
+        return (
+            <ProyectLinks>
+            {
+                links.map((el, i) =>{
+                    return(
+                        <a 
+                        href={el} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        key={i}
+                        title={el}
+                        >
+                        {iconNames[i] === 'BsGithub' ? <BsGithub size={'2rem'} style={{marginRight: "1rem"}} /> : <BiLinkExternal size={'2rem'} />}
+                        </a>
+                    )
+                })
+            }
+       
+        </ProyectLinks>   
+        )
+    }
+    
 }
 
 export default Proyects
