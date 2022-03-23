@@ -101,4 +101,10 @@ transition: all 0.3s ease-in;
     color:#454546;
 }
 `
+export const P = styled.div`
+font-size:1.2rem;
+a{
+    color: #ffc340;
+}
 
+`

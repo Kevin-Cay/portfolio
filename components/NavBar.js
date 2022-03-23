@@ -38,11 +38,16 @@ const handleChange = ()=>{
             {language == 'english' ? 'About me' : 'Sobre mi ' }        
             </MenuLink>
             </Link>
-            <Link href="#proyects" passHref >
+            <Link href="#projects" passHref >
             <MenuLink onClick={() => (setIsOpen(false)) } > 
             {/* <BsBricks style={{color: '#ffc340'}}  size={"1.3rem"} />   */}
             {/* Proyects */}
-            {language =="english" ? 'Proyects' : 'Proyectos'}
+            {language =="english" ? 'Projects' : 'Proyectos'}
+            </MenuLink>
+            </Link>
+            <Link href="#templates" passHref >
+            <MenuLink onClick={() => (setIsOpen(false)) } > 
+            {language == "english" ? 'Templates' : 'Plantillas'}
             </MenuLink>
             </Link>
             <Link href="#tech" passHref >
@@ -51,11 +56,7 @@ const handleChange = ()=>{
             {language == "english" ? 'Technologies' : 'Tecnologías'}
             </MenuLink>
             </Link>
-            <Link href="#" passHref >
-            <MenuLink onClick={() => (setIsOpen(false)) } > 
-            {language == "english" ? 'Templates' : 'Plantillas'}
-            </MenuLink>
-            </Link>
+            
         </Menu>
         {/* <DropDownMenu>
             <DropDownHeader> Language <BsChevronDown /> </DropDownHeader>

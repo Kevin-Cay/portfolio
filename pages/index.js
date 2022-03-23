@@ -4,8 +4,9 @@ import AboutMe from '../components/AboutMe'
 import ContactForm from '../components/ContactForm'
 import Header from '../components/Header'
 import NavBar from '../components/NavBar'
-import Proyects from '../components/Proyects'
+import Projects from '../components/Projects'
 import Technologies from '../components/Technologies'
+import Templates from '../components/Templates'
 
 export default function Home() {
     const [language, setLanguage] = useState('english');
@@ -19,7 +20,8 @@ export default function Home() {
       <NavBar setLanguage={setLanguage} language={language} />
       <Header language={language} />
       <AboutMe  language={language} id="about"/>
-      <Proyects language={language} id="proyects" />
+      <Projects language={language} id="projects" />
+      <Templates language={language} id="templates" />
       <Technologies language={language} id="tech" />
       <ContactForm language={language} id="contact" />
     </div>

@@ -1,19 +1,18 @@
-import styled from "styled-components"
 import Image from 'next/image';
 import {BsGithub} from 'react-icons/bs';
 import{BiLinkExternal} from 'react-icons/bi'
 import { Container, Title, Puntos } from "./global.styles";
-import { ProyectContent, ProyectDiv, ProyectImg, ProyectDescription, ProyectTitle, DescriptionCard, TechDescription, ProyectLinks, ProyectLeftImg,  ProyectLeftDescription, ProyectLeftTitle,  DescriptionCardLeft, TechLeftDescription, ProyectLeftLinks } from "./Proyects.styles";
+import { ProyectContent, ProyectDiv, ProyectImg, ProyectDescription, ProyectTitle, DescriptionCard, TechDescription, ProyectLinks, ProyectLeftImg,  ProyectLeftDescription, ProyectLeftTitle,  DescriptionCardLeft, TechLeftDescription, ProyectLeftLinks } from "./Projects.styles";
 
-function Proyects({language}) {
+function Projects({language}) {
     return (
-        <Container id="proyects" 
+        <Container id="projects" 
         nopadding 
         mTop="3em"
         height="auto"  >
             <Title>
                 <Puntos />
-                <h1>{language == "english" ? 'Proyects': 'Proyectos'}<span>.</span></h1>
+                <h1>{language == "english" ? 'Projects': 'Proyectos'}<span>.</span></h1>
                 {/* <h1>Proyects<span>.</span></h1> */}
             </Title>
             <ProyectContent>
@@ -347,4 +346,4 @@ const ProyectLinksElement = ({side, links, iconNames}) =>{
     
 }
 
-export default Proyects
+export default Projects
