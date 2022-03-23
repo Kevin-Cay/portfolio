@@ -118,6 +118,100 @@ function Proyects({language}) {
             
             <ProyectDiv>
                 <ProyectImg >
+                    <a target="_blank" href="https://kevin-cay.github.io/nasa-app-react/" rel="noopener noreferrer">
+                    <Image 
+                    src={"/nasaApp.png"} 
+                    alt="nasaAppScreenshot" 
+                    layout="fill"  
+                    objectFit="contain" 
+                    />
+                    </a>
+                </ProyectImg> 
+                <ProyectDescription>
+                    <ProyectTitle>
+                        <h1>NASA App<span>.</span> </h1>
+                    </ProyectTitle>
+                    <DescriptionCard>
+                        {
+                            language == "english" ?(<>
+                            <p>In this app you can view information about <span>NASA.</span></p>
+                            <p>
+                                This app will show you the <span>pic of the day </span> with a short description, from NASA API.  You can also see a collection of the latest photos taken by different <span>rovers </span> ( Curiosity and Opportunity ).
+                            </p>
+                            <p>Take a look  🚀. </p>
+                            </>)
+                            :
+                            (<>
+                            <p>En esta aplicación podrás ver información de la <span>NASA </span> gracias a la API que ellos proveen. </p>
+                            <p>Podrás ver la foto del día con una pequeña descripción</p>
+                            <p>También podras ver una pequeña colección de las últimas fotos tomasdas por diferentes rovers (Curiosity y Opportunity)</p>
+                            </>)
+                        }
+                        
+                        <TechDescription>
+                            <p>ReactJS</p>
+                            <p>JavaScript</p>
+                            <p>NASA API</p> 
+                        </TechDescription>
+                    </DescriptionCard>
+                    <ProyectLinksElement 
+                    side="right" 
+                    links={['https://github.com/Kevin-Cay/nasa-app-react.git', 'https://kevin-cay.github.io/nasa-app-react/' ]} 
+                    iconNames={['BsGithub', 'BiLinkExternal' ]} />
+                   
+                </ProyectDescription>  
+            </ProyectDiv> 
+            <ProyectDiv>
+                <ProyectLeftImg >
+                    <a target="_blank" href="https://kevin-cay.github.io/calculadora-propina/" rel="noopener noreferrer">
+                    <Image 
+                    src={"/tipCalculator.png"} 
+                    alt="TipCalculator" 
+                    layout="fill"  
+                    objectFit="contain" 
+                    />
+                    </a>
+                </ProyectLeftImg> 
+                <ProyectLeftDescription>
+                    <ProyectLeftTitle>
+                        <h1>Tip Calculator<span>.</span> </h1>
+                    </ProyectLeftTitle>
+                    <DescriptionCardLeft>
+                        {
+                            language == "english" ?(
+                                <><p>An app to split the bill among your <span>friends.</span></p>
+                                <p>
+                                    Just type in the total bill, percentage of the tip, and the number of people.
+                                </p>
+                                <p>
+                                    The app will show you the total amount of the bill, the tip per person, and the amount per person.
+                                </p>
+                                 </>
+                                ):(
+                                <>
+                                <p>Una aplicación que te ayudará a dividir la cuenta con tu grupo de <span>amigos. </span></p>
+                                <p>
+                                Solo necesitarás el total, el porcentaje de la propina y el número de personas.
+                                </p>
+                                <p>El valor de la moneda por defecto es el Quetzal Guatemalateco</p>
+                                </>
+                            )
+                        }
+                        <TechLeftDescription>
+                            <p>HTML</p>
+                            <p>CSS</p> 
+                            <p>JavaScript</p> 
+                        </TechLeftDescription>
+                    </DescriptionCardLeft>
+                    <ProyectLinksElement 
+                    side="left" 
+                    links={['https://github.com/Kevin-Cay/calculadora-propina.git', 'https://kevin-cay.github.io/calculadora-propina/' ]} 
+                    iconNames={['BsGithub', 'BiLinkExternal' ]} />
+                </ProyectLeftDescription>  
+            </ProyectDiv> 
+            </ProyectContent>
+            <ProyectDiv>
+                <ProyectImg >
                     <a target="_blank" href="https://kevin-cay.github.io/googl-app/" rel="noopener noreferrer">
                     <Image 
                     src={"/googlApp.png"} 
@@ -132,55 +226,36 @@ function Proyects({language}) {
                         <h1>Googl App<span>.</span> </h1>
                     </ProyectTitle>
                     <DescriptionCard>
-                        {/* <p>In this app you can search <span>information, images, news or videos </span> 
-                        about someone or something</p>
-                        <p>
-                            Here you can find the best information of all internet.  
-                        </p>
-                        <p>
-                        Enjoy it! 🙂.
-                        </p> */}
-                        <p>En esta app podrás buscar <span>información , imágenes, noticias y vídeos </span> 
-                        sobre alguien o algo.</p>
-                        <p>
-                           Aquí podrás encontrar cualquier coda de internet. La mejor información y de manera fácil. 
-                           Está conectada direcatamente con la Api de Google. 
-                        </p>
-                        <p>
-                        ¡Disfrútalo ! 🙂.
-                        </p>
+                        {
+                            language == "english" ?(
+                                <><p>An app to search for <span>images, information, news or videos</span> from Google API.</p>
+                                {/* <p>It is a different </p> */}
+                                <p>Here you can find the best information on the internet </p>
+                                </>)
+                                :
+                                (<>
+                                <p>Una aplicación para buscar <span>imagenes, información, noticias o videos</span> de google</p>
+                                <p>Aquí podrás encontrar la mejor información de todo internet.</p>
+                                </>)
+                        }
+                        
                         <TechDescription>
                             <p>React JS</p>
                             <p>Google Api</p> 
                         </TechDescription>
                     </DescriptionCard>
-                    <ProyectLinks>
-                    <a 
-                    href="https://github.com/Kevin-Cay/googl-app" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <BsGithub  
-                    size={'2rem'} 
-                    style={{marginRight: "1rem"}} 
-                    />
-                    </a>
-                    <a 
-                    href="https://kevin-cay.github.io/googl-app/" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <BiLinkExternal 
-                    size={'2rem'} 
-                    />
-                    </a>
-                    </ProyectLinks>
+                    <ProyectLinksElement 
+                    side="right" 
+                    links={['https://github.com/Kevin-Cay/googl-app', 'https://kevin-cay.github.io/googl-app/' ]} 
+                    iconNames={['BsGithub', 'BiLinkExternal' ]} />        
                 </ProyectDescription>  
             </ProyectDiv> 
             <ProyectDiv>
                 <ProyectLeftImg >
-                    <a target="_blank" href="https://kevin-cay.github.io/buscador-imagenes/" rel="noopener noreferrer">
+                    <a target="_blank" href="https://upbeat-agnesi-d73201.netlify.app/" rel="noopener noreferrer">
                     <Image 
-                    src={"/searchImgApp.png"} 
-                    alt="searchImgApp" 
+                    src={"/adviceGenerator.png"} 
+                    alt="adviceGenerator" 
                     layout="fill"  
                     objectFit="contain" 
                     />
@@ -188,53 +263,47 @@ function Proyects({language}) {
                 </ProyectLeftImg> 
                 <ProyectLeftDescription>
                     <ProyectLeftTitle>
-                        <h1>Tip Calculator<span> app.</span> </h1>
+                        <h1>Advice generator<span>.</span> </h1>
                     </ProyectLeftTitle>
                     <DescriptionCardLeft>
-                        {/* <p>An easy way to find any <span>Image </span> about someone or something with a short description.</p>
-                        <p>
-                         You just need a word to find a lot of images about it. You can use this app every time.
-                        </p> */}
-                        <p>Una manera muy fácil de encontrar cualquier <span>imagen. </span> sobre cualquier cosa y también con una breve descripción.</p>
-                        <p>
-                         Solo necesitas una palabra y se te mostarán muchas imagenes de manera ordenada. Es una manera simple de encontrar una buena imagen.
-                        </p>
+                        {
+                            language == "english" ?(<>
+                            <p>This app can generate an <span>advice</span> for you.</p>
+                            <p>
+                                Just click the button to generate a new <span>advice.</span>
+                            </p>
+                            <p>
+                                You can use it in any device, anywhere you are.
+                            </p>
+                            <p>Enjoy it 😊. </p>
+                            </>)
+                            :
+                            (<>
+                            <p>Esta aplicación podrá generar un <span>consejo </span> para ti. </p>
+                            <p>Con un botón podrás cambiar de consejo de manera fácil y rápida.</p>
+                            <p>Puedes utilizarlo en cualquier lugar y en diferentes dispositivos.</p>
+                            </>)
+                        }
+                        
                         <TechLeftDescription>
-                            <p>React JS</p>
-                            <p>CSS</p> 
-                            <p>Unsplash API</p> 
+                            <p>CSS</p>
+                            <p>JavaScript</p>
+                            <p>API</p> 
                         </TechLeftDescription>
                     </DescriptionCardLeft>
-                    <ProyectLeftLinks>
-                    <a 
-                    href="https://github.com/Kevin-Cay/buscador-imagenes" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <BsGithub  
-                    size={'2rem'} 
-                    style={{marginRight: "1rem"}} 
-                    />
-                    </a>
-                    <a 
-                    href="https://kevin-cay.github.io/buscador-imagenes/" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <BiLinkExternal 
-                    size={'2rem'} 
-                    />
-                    </a>
-                    </ProyectLeftLinks>
+                    <ProyectLinksElement 
+                    side="left" 
+                    links={['https://github.com/Kevin-Cay/advice-generator.git', 'https://upbeat-agnesi-d73201.netlify.app/' ]} 
+                    iconNames={['BsGithub', 'BiLinkExternal' ]} />
+                   
                 </ProyectLeftDescription>  
             </ProyectDiv> 
-            </ProyectContent>
         </Container>
     )
 }
 
 const ProyectLinksElement = ({side, links, iconNames}) =>{
-    links.map((el, i) =>{
-        console.log(el, i)
-    })
+    
     if(side === 'left'){
         return(
             <ProyectLeftLinks>
