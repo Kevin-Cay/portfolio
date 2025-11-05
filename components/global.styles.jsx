@@ -4,7 +4,7 @@ export const Container = styled.section`
     margin-top: ${props=> props.mTop || 0 } ;
     width: 100%;
     height: ${props => props.height || 'auto' };
-    max-width: 1400px;
+    max-width: 100vw;
     display: flex;
     flex-direction: column;
     align-items: center;
