@@ -65,9 +65,9 @@ function AboutMe({language}) {
                     }
                      
                     
-                <Button maxWidth={'200px'} maxHeight={'50px'} href={language == 'english' ? '/KC-CV-EN.pdf':'/KC-CV-ES.pdf'}  download >
+                {/* <Button maxWidth={'200px'} maxHeight={'50px'} href={language == 'english' ? '/KC-CV-EN.pdf':'/KC-CV-ES.pdf'}  download >
                       {language == "english" ? 'Download CV' :'Descargar CV' }  
-                </Button>
+                </Button> */}
                 <BottonIcon>
                    <Image
                     src="/circuit.svg"
