@@ -15,8 +15,8 @@ function Header({language}) {
                 <ReactTyped
                 styled={{marginTop: '0px'}}
                 strings={[
-                    "I’m a Front-End developer.",
-                    "I’m a Tech lover."
+                    "I’m a Software Developer.",
+                    "I’m a Tech Lover."
                     ]}
                     typeSpeed={85}
                     backSpeed={85}
