@@ -1,5 +1,5 @@
 
-import Typed from 'react-typed';
+import { ReactTyped } from "react-typed";
 import {BsGithub, BsLinkedin} from 'react-icons/bs';
 import { Content, TypedText, SocialMediaMenu, ContainerHeader } from './Header.styles';
 import { ImageContainerAvatar, H1, Button } from './global.styles';
@@ -12,24 +12,23 @@ function Header({language}) {
                 <ImageContainerAvatar width={'8em'} height={'8em'} />
                 <H1>Kevin Cay<span>.</span> </H1>
                 <TypedText>
-                <Typed
+                <ReactTyped
                 styled={{marginTop: '0px'}}
                 strings={[
                     "I’m a Front-End developer.",
-                    // "I’m a Junior Dev.",
                     "I’m a Tech lover."
                     ]}
                     typeSpeed={85}
                     backSpeed={85}
                     loop >
-                </Typed>
+                </ReactTyped>
                 </ TypedText>
 
                 <SocialMediaMenu>
                     <a
                     href="https://github.com/Kevin-Cay" 
                     target="_blank" 
-                    rel="noopener noreferrer" passHref  >
+                    rel="noopener noreferrer" >
                     <BsGithub  
                     size={'2rem'} 
                     style={{marginRight: "1rem", cursor: "pointer"}} 
@@ -45,7 +44,7 @@ function Header({language}) {
                     />
                     </a>
                 </SocialMediaMenu>
-                    <Button maxWidth={'200px'} maxHeight={'50px'} href="#contact" passHrefs >
+                    <Button maxWidth={'200px'} maxHeight={'50px'} href="#contact" >
                         {language == 'english' ? 'Hire me' : 'Salúdame' }
                     </Button>
             </Content>

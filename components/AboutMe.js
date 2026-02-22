@@ -27,23 +27,24 @@ function AboutMe({language}) {
                 <Message>
                     {
                         language == "english" ?
-                        <div>
-                        <h2>
-                        Hello! My name is <span>Kevin.</span> Nice to meet you.
-                        </h2>
-                        <p>
-                        I’m a a software developer with experience building web applications. I always focus on writing code to create systems that are reliable and user-friendly. 
-                        I enjoy creating software solutions to improve lives of those around me. 
-                        </p>
-                         <p>
-                             Code is an <span>!important</span> part of my life but usually I change my computer for circuits and leds.
-                        </p> 
-                        <p>
-                        </p> 
-                        <p>
-                        I’m always creating, always learning and never get bored.
-                        </p>
-                        </div> 
+                                <div>
+                                    <h2>
+                                        Hello! My name is <span>Kevin.</span> Nice to meet you.
+                                    </h2>
+                                    <p>
+                                        I’m a software developer with experience building modern web applications.
+                                        I focus on writing clean, maintainable code to create systems that are reliable, scalable, and user-friendly.
+                                    </p>
+                                    <p>
+                                        I enjoy building software solutions that make a real impact and improve the lives of the people around me.
+                                    </p>
+                                    <p>
+                                        Code is an <span>!important</span> part of my life — but sometimes I swap my computer for circuits and LEDs to bring ideas to life in a different way.
+                                    </p>
+                                    <p>
+                                        I’m always creating, always learning, and never bored.
+                                    </p>
+                                </div>
                         // Usually change my computer for circuits and leds.
                         :
                         <div>
