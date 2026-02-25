@@ -1,9 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
 import Image from 'next/image';
 import { Container , Title, Puntos, Button } from './global.styles';
 import { AboutContent, ImageDiv, MessageDiv , Message, BottonIcon} from './AboutMe.styles';
-
 
 
 function AboutMe({language}) {
@@ -64,10 +61,6 @@ function AboutMe({language}) {
                     </div> 
                     }
                      
-                    
-                {/* <Button maxWidth={'200px'} maxHeight={'50px'} href={language == 'english' ? '/KC-CV-EN.pdf':'/KC-CV-ES.pdf'}  download >
-                      {language == "english" ? 'Download CV' :'Descargar CV' }  
-                </Button> */}
                 <BottonIcon>
                    <Image
                     src="/circuit.svg"
